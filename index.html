@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | Trama</title>
+  <link rel="stylesheet" href="css/stylelogin.css">
+</head>
+<body>
+  <main class="login">
+    <section class="login__brand" aria-hidden="true">
+      <h1 class="login__logo">Trama</h1>
+      <p>Ropa para todos los días, cortada con cuidado.</p>
+    </section>
+
+    <section class="login__panel">
+      <h2>Ingresa a tu cuenta</h2>
+      <form id="formLogin" novalidate>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" autocomplete="username" required>
+
+        <label for="clave">Contraseña</label>
+        <div class="campo-clave">
+          <input type="password" id="clave" autocomplete="current-password" required>
+          <button type="button" id="verClave" aria-label="Mostrar contraseña">Ver</button>
+        </div>
+
+        <p id="mensaje" class="mensaje" role="alert"></p>
+        <button type="submit" class="btn">Entrar a la tienda</button>
+      </form>
+
+      <p class="ayuda">Prueba con <strong>cliente</strong> / <strong>1234</strong> o <strong>admin</strong> / <strong>admin123</strong></p>
+    </section>
+  </main>
+  <script src="js/scriptlogin.js"></script>
+</body>
+</html>

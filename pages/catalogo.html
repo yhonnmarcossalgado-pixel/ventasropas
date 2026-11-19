@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trama | Tienda de ropa</title>
+  <link rel="stylesheet" href="../css/styleindex.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <button id="btnMenu" class="header__menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuLateral">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="catalogo.html" class="header__logo">Trama</a>
+    <div class="header__usuario">
+      <span id="saludo"></span>
+      <button id="btnSalir" class="btn-linea">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <!-- NAV desplegable a la izquierda -->
+  <div id="fondo" class="fondo" hidden></div>
+  <nav id="menuLateral" class="nav" aria-label="Categorías">
+    <button id="btnCerrar" class="nav__cerrar" aria-label="Cerrar menú">×</button>
+    <h2>Categorías</h2>
+    <ul>
+      <li><a href="#catalogo" data-filtro="todos" class="activo">Todo</a></li>
+      <li><a href="#catalogo" data-filtro="camisetas">Camisetas</a></li>
+      <li><a href="#catalogo" data-filtro="pantalones">Pantalones</a></li>
+      <li><a href="#catalogo" data-filtro="abrigos">Abrigos</a></li>
+      <li><a href="#catalogo" data-filtro="accesorios">Accesorios</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+    <!-- MAIN -->
+    <main class="main">
+      <section class="hero">
+        <h1>Nueva colección de temporada</h1>
+        <p>Prendas básicas en tejidos suaves, listas para combinar.</p>
+        <a href="#catalogo" class="btn">Ver catálogo</a>
+      </section>
+
+      <section id="catalogo" class="catalogo">
+        <div class="catalogo__cabecera">
+          <h2 id="tituloCategoria">Todo el catálogo</h2>
+          <p id="contador"></p>
+        </div>
+        <div id="productos" class="productos"></div>
+      </section>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="aside">
+      <section class="caja">
+        <h2>Tu carrito</h2>
+        <ul id="listaCarrito" class="carrito"></ul>
+        <p class="total">Total: <strong id="total">Bs 0</strong></p>
+        <button id="btnVaciar" class="btn-linea">Vaciar carrito</button>
+      </section>
+
+      <section class="caja caja--promo">
+        <h2>Envío gratis</h2>
+        <p>En compras mayores a Bs 400.</p>
+      </section>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Trama. Todos los derechos reservados.</p>
+    <p>Atención: lunes a sábado, 9:00 a 19:00</p>
+  </footer>
+
+  <script src="../js/scriptindex.js"></script>
+</body>
+</html>

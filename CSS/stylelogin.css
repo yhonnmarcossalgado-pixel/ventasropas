@@ -1,0 +1,48 @@
+:root{
+  --tinta:#16213A;
+  --mostaza:#E0A526;
+  --hueso:#F2F4F5;
+  --blanco:#FFFFFF;
+  --gris:#6B7385;
+  --error:#B3261E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--hueso);color:var(--tinta);min-height:100vh}
+
+.login{display:grid;grid-template-columns:1.1fr 1fr;min-height:100vh}
+
+.login__brand{
+  background:var(--tinta);color:var(--hueso);
+  display:flex;flex-direction:column;justify-content:flex-end;gap:1rem;
+  padding:3rem;
+  background-image:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.05) 22px 23px),
+                   repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.05) 22px 23px);
+}
+.login__logo{font-family:"Syne",system-ui,sans-serif;font-weight:800;font-size:clamp(4rem,10vw,8rem);line-height:.9;color:var(--mostaza);letter-spacing:-.04em}
+.login__brand p{max-width:28ch;font-size:1.15rem;line-height:1.5}
+
+.login__panel{display:flex;flex-direction:column;justify-content:center;padding:3rem clamp(1.5rem,6vw,5rem);max-width:520px}
+.login__panel h2{font-family:"Syne",system-ui,sans-serif;font-size:1.9rem;margin-bottom:2rem}
+
+form{display:flex;flex-direction:column;gap:.5rem}
+label{font-weight:600;font-size:.95rem;margin-top:.75rem}
+input{width:100%;padding:.85rem 1rem;border:2px solid #CBD0DA;border-radius:6px;font:inherit;background:var(--blanco);color:var(--tinta)}
+input:focus{outline:3px solid var(--mostaza);outline-offset:1px;border-color:var(--tinta)}
+.campo-clave{position:relative}
+.campo-clave button{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--gris);font:inherit;font-weight:600;cursor:pointer;padding:.4rem .6rem}
+
+.mensaje{min-height:1.4rem;margin-top:.5rem;color:var(--error);font-size:.92rem}
+.mensaje.ok{color:#1B6B3A}
+
+.btn{margin-top:.5rem;padding:.95rem 1rem;border:0;border-radius:6px;background:var(--tinta);color:var(--blanco);font:inherit;font-weight:700;cursor:pointer;transition:background .2s}
+.btn:hover{background:#243459}
+.btn:focus-visible{outline:3px solid var(--mostaza);outline-offset:2px}
+
+.ayuda{margin-top:2rem;color:var(--gris);font-size:.88rem;line-height:1.6}
+
+@media (max-width:760px){
+  .login{grid-template-columns:1fr}
+  .login__brand{min-height:200px;padding:2rem}
+  .login__logo{font-size:4rem}
+  .login__panel{max-width:none;padding:2rem 1.5rem}
+}
